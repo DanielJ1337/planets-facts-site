@@ -1,0 +1,110 @@
+.main {
+    height: calc(100vh - 81px);
+    display: grid;
+    place-content: center;
+}
+.planet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 144rem;
+    height: 75.6rem;
+    margin: 21.4rem auto;
+}
+
+.planet__image {
+    flex: 0.5;
+    text-align: center;
+}
+
+.planet__info-wrapper {
+    flex: 0.5;
+    max-width: 35rem;
+}
+
+.planet__name {
+    font-size: 8rem;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 500;
+}
+
+.planet__info {
+    font-size: 1.4rem;
+    font-family: 'Spartan', sans-serif;
+    line-height: 2.5rem;
+    margin-top: 2.3rem;
+}
+
+.planet__source {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    font-family: 'Spartan', sans-serif;
+    margin: 2.4rem 0 3.9rem;
+}
+
+.planet__hyperlink {
+    font-weight: bold;
+    color: var(--white);
+}
+
+.planet__buttons {
+    border: 1px solid var(--lightGray);
+    line-height: 2.5rem;
+    letter-spacing: 2.57px;
+    padding: 1.8rem 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.planet__link,
+.planet__buttons--number {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 2.8rem;
+}
+
+.planet__buttons--number {
+    color: var(--lightGray);
+    font-size: 1.2rem;
+}
+
+.planet__add-info {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    width: 107rem;
+    margin: 4.7rem 5.6rem;
+}
+
+.planet .add-info__rotation,
+.planet .add-info__evolution,
+.planet .add-info__radius,
+.planet .add-info__temp {
+    border: 1px solid var(--lightGray);
+    padding: 2rem 6rem 2.3rem 2.7rem;
+    width: 15.6rem;
+}
+
+.add-info__rotation > span,
+.add-info__evolution > span,
+.add-info__radius > span,
+.add-info__temp > span {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--lightGray);
+    letter-spacing: 1px;
+}
+
+.add-info__rotation > p,
+.add-info__evolution > p,
+.add-info__radius > p,
+.add-info__temp > p {
+    font-family: 'Antonio', sans-serif;
+    font-size: 4rem;
+    letter-spacing: -1.5px;
+}

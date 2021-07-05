@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan&display=swap" rel="stylesheet">
+    <link href="/css/navbar.css" rel="stylesheet" type="text/css">
+    <link href="/css/planets.css" rel="stylesheet" type="text/css">
+
+    <title>Frontend Mentor | Planets fact site</title>
+</head>
+<header>
+    <nav class="navbar">
+        <div class="logo-font">
+            the planets
+        </div>
+        <ul class="navbar__ul">
+            <% planets.forEach(element => { %>
+            <li class="navbar__li-item"><a href=<%= element.link%>><%= element.name  %> </a></li>
+            <% }) %>
+        </ul>
+        <div class="navbar__hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<body>
