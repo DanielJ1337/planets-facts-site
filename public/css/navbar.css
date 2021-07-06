@@ -15,6 +15,7 @@ html {
 body {
     background-color: var(--darkBlue);
     color: var(--white);
+    background-image: url('../images/background-stars.svg');
 }
 
 .navbar {
@@ -49,7 +50,7 @@ body {
 .navbar__li-item {
     list-style-type: none;
     margin-left: 3.3rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Spartan', sans-serif;

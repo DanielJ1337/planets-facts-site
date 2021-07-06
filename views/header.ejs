@@ -7,10 +7,14 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan&display=swap" rel="stylesheet">
     <link href="/css/navbar.css" rel="stylesheet" type="text/css">
     <link href="/css/planets.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/js/script.js" defer></script>
 
     <title>Frontend Mentor | Planets fact site</title>
 </head>
@@ -21,7 +25,7 @@
         </div>
         <ul class="navbar__ul">
             <% planets.forEach(element => { %>
-            <li class="navbar__li-item"><a href=<%= element.link%>><%= element.name  %> </a></li>
+            <li class="navbar__li-item"><a href=<%= element.link%>><%= element.name%> </a></li>
             <% }) %>
         </ul>
         <div class="navbar__hamburger">

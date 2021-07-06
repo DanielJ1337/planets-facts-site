@@ -2,44 +2,44 @@
 <main class="main">
     <section class="planet">
         <div class="planet__image">
-            <img src=<%= planets[0].images.planet %> alt="mercury">
+            <img src=<%= planets[strippedURL].images.planet %> alt="mercury">
         </div>
         <div class="planet__info-wrapper">
-            <h1 class="planet__name">Mercury</h1>
-            <p class="planet__info"><%= planets[0].overview.content %> </p>
+            <h1 class="planet__name"><%= planets[strippedURL].name %></h1>
+            <p class="planet__info"><%= planets[strippedURL].overview.content %> </p>
             <p class="planet__source">Source: <a class="planet__hyperlink"
-                    href=<%= planets[0].overview.source %>>Wikipedia</a><span></span></p>
+                    href=<%= planets[strippedURL].overview.source %>>Wikipedia</a><span></span></p>
             <div class="planet__links-container">
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">01</span>
-                    <a class="planet__link" href="">Overview</a>
+                    <a class="planet__link" href=<%= planets.link %>>Overview</a>
                 </div>
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">02</span>
-                    <a class="planet__link" href="">Internal structure</a>
+                    <a class="planet__link" href="/internal" onclick="showInternal">Internal structure</a>
                 </div>
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">03</span>
-                    <a class="planet__link" href="">Surface geology</a>
+                    <a class="planet__link" href="mercury-0/surface">Surface geology</a>
                 </div>
             </div>
         </div>
         <div class="planet__add-info">
             <div class="add-info__rotation">
                 <span>Rotation Time</span>
-                <p><%= planets[0].rotation %> </p>
+                <p><%= planets[strippedURL].rotation %> </p>
             </div>
             <div class="add-info__evolution">
                 <span>Revolution Time</span>
-                <p><%= planets[0].revolution %> </p>
+                <p><%= planets[strippedURL].revolution %> </p>
             </div>
             <div class="add-info__radius">
                 <span>Radius</span>
-                <p><%= planets[0].radius %> </p>
+                <p><%= planets[strippedURL].radius %> </p>
             </div>
             <div class="add-info__temp">
                 <span>Average Temp.</span>
-                <p><%= planets[0].temperature %> </p>
+                <p><%= planets[strippedURL].temperature %> </p>
             </div>
         </div>
     </section>
