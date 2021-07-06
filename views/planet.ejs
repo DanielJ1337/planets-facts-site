@@ -1,14 +1,16 @@
 <%- include ('header') -%>
 <main class="main">
     <section class="planet">
-        <div class="planet__image">
-            <img src=<%= planets[strippedURL].images.planet %> alt="mercury">
+        <div class="planet__image-container">
+            <img class="planet__image" src=<%= planets[strippedURL].images.planet %> alt="mercury">
         </div>
         <div class="planet__info-wrapper">
-            <h1 class="planet__name"><%= planets[strippedURL].name %></h1>
-            <p class="planet__info"><%= planets[strippedURL].overview.content %> </p>
-            <p class="planet__source">Source: <a class="planet__hyperlink"
-                    href=<%= planets[strippedURL].overview.source %>>Wikipedia</a><span></span></p>
+            <div class="planet__text-wrapper">
+                <h1 class="planet__name"><%= planets[strippedURL].name %></h1>
+                <p class="planet__info"><%= planets[strippedURL].overview.content %> </p>
+                <p class="planet__source">Source: <a class="planet__hyperlink"
+                        href=<%= planets[strippedURL].overview.source %>>Wikipedia</a><span></span></p>
+            </div>
             <div class="planet__links-container">
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">01</span>

@@ -23,7 +23,8 @@
             "internal": "/images/planet-mercury-internal.svg",
             "geology": "/images/mercurygeology-mercury.png"
         },
-        "link": "/planets/mercury-0"
+        "link": "/planets/mercury-0",
+        "color": "hsl(194, 48%,49%)"
     },
     {
         "id": 1,

@@ -6,13 +6,8 @@ const fs = require('fs');
 const planetRouter = require('./routes/planet-routes');
 app.locals.planets = require('./data.json');
 
-// const navbarCSS = {
-//     style: fs.readFileSync('./navbar.css', 'utf-8'),
-// };
-
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
-
 app.use('/planets', planetRouter);
 
 app.listen(port, (err) => {
