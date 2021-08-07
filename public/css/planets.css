@@ -70,7 +70,9 @@
     margin-bottom: 1.6rem;
 }
 
-.planet__link,
+.planet__link--overview,
+.planet__link--surface,
+.planet__link--internal,
 .planet__buttons--number {
     font-family: 'Spartan', sans-serif;
     font-weight: bold;
@@ -122,6 +124,12 @@
     font-family: 'Antonio', sans-serif;
     font-size: 3.8rem;
     letter-spacing: -1.5px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .planet {
+        margin-top: 35%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
