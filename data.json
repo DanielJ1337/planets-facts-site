@@ -23,7 +23,10 @@
             "internal": "/images/planet-mercury-internal.svg",
             "geology": "/images/mercurygeology-mercury.png"
         },
-        "link": "/planets/mercury-0",
+        "link": {"overview": "/planets/mercury-0",
+                "structure": "/planets/mercury-0/surface",
+                "geology": "/planets/mercury-0/geology"
+            },
         "color": "hsl(194, 48%,49%)"
     },
     {
@@ -50,7 +53,10 @@
             "internal": "/images/planet-venus-internal.svg",
             "geology": "/images/geology-venus.png"
         },
-        "link": "/planets/venus-1"
+        "link": {"overview": "/planets/venus-1",
+                "structure": "/planets/venus-1/surface",
+                "geology": "/planets/venus-1/geology"
+            }
     },
     {
         "id": 2,
@@ -76,7 +82,10 @@
             "internal": "/images/planet-earth-internal.svg",
             "geology": "/images/geology-earth.png"
         },
-        "link": "/planets/earth-2"
+        "link": {"overview": "/planets/earth-2",
+                "structure": "/planets/earth-2/surface",
+                "geology": "/planets/earth-2/geology"
+        }
     },
     {
         "id": 3,
@@ -102,7 +111,10 @@
             "internal": "/images/planet-mars-internal.svg",
             "geology": "/images/geology-mars.png"
         },
-        "link": "/planets/mars-3"
+        "link": {"overview": "/planets/mars-3",
+                "structure": "/planets/mars-3/surface",
+                "geology": "/planets/mars-3/geology"
+        }
     },
     {
         "id": 4,
@@ -128,7 +140,10 @@
             "internal": "/images/planet-jupiter-internal.svg",
             "geology": "/images/geology-jupiter.png"
         },
-        "link": "/planets/jupiter-4"
+        "link": {"overview": "/planets/jupiter-4",
+                "structure": "/planets/jupiter-4/surface",
+                "geology": "/planets/jupiter-4/geology"
+        }
     },
     {
         "id": 5,
@@ -154,7 +169,10 @@
             "internal": "/images/planet-saturn-internal.svg",
             "geology": "/images/geology-saturn.png"
         },
-        "link": "/planets/saturn-5"
+        "link": {"overview": "/planets/saturn-5",
+                "structure": "/planets/saturn-5/surface",
+                "geology": "/planets/saturn-5/geology"
+        }
     },
     {
         "id": 6,
@@ -180,7 +198,10 @@
             "internal": "/images/planet-uranus-internal.svg",
             "geology": "/images/geology-uranus.png"
         },
-        "link": "/planets/uranus-6"
+        "link": {"overview": "/planets/uranus-6",
+                "structure": "/planets/uranus-6/surface",
+                "geology": "/planets/uranus-6/geology"
+        }
     },
     {
         "id": 7,
@@ -206,6 +227,9 @@
             "internal": "/images/planet-neptune-internal.svg",
             "geology": "/images/geology-neptune.png"
         },
-        "link": "/planets/neptune-7"
+        "link": {"overview": "/planets/neptune-7",
+                "structure": "/planets/neptune-7/surface",
+                "geology": "/planets/neptune-7/geology"
+        }
     }
 ]

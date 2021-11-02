@@ -25,7 +25,7 @@
         </div>
         <ul class="navbar__ul">
             <% planets.forEach(element => { %>
-            <li class="navbar__li-item"><a href=<%= element.link%>><%= element.name%> </a></li>
+            <li class="navbar__li-item"><a href=<%= element.link.overview%>><%= element.name%> </a></li>
             <% }) %>
         </ul>
         <div class="navbar__hamburger">

@@ -5,7 +5,6 @@ const port = 3000;
 const fs = require('fs');
 const planetRouter = require('./routes/planet-routes');
 app.locals.planets = require('./data.json');
-require('./public/js/script');
 
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));

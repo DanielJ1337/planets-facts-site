@@ -19,47 +19,60 @@
     </div>
     <section class="planet">
         <div class="planet__image-container">
-            <img class="planet__image" src=<%= planets[strippedURL].images.planet %> alt="mercury">
+            <img class="planet__image" src=<% if(urlString === planets[strippedId].link.overview) { %>
+                <%= planets[strippedId].images.planet %> alt=<%= planets[strippedId].name %>>
+                <% } else if (urlString === planets[strippedId].link.structure) { %>
+                    <%= planets[strippedId].images.internal %>
+                    <% } else if (urlString === planet[strippedId].link.geology) { %>
+                        <%= planets[strippedId].images.geology %>
+                        <% } %>
         </div>
         <div class="planet__info-wrapper">
             <div class="planet__text-wrapper">
-                <h1 class="planet__name"><%= planets[strippedURL].name %></h1>
-                <p class="planet__info"><%= planets[strippedURL].overview.content %> </p>
+                <h1 class="planet__name"><%= planets[strippedId].name %></h1>
+                <p class="planet__info"><% if (urlString === planets[strippedId].link.overview) { %>
+                    <%= planets[strippedId].overview.content %> 
+                        <% } else if (urlString === planets[strippedId].link.structure) { %>
+                            <%= planetStructures[strippedId].structure %>
+                            <% } else if (urlString === planets[strippedId].link.geology)  { %>
+                                <%= planets[strippedId].geology.content %>
+                                <% } %>
+                 </p>
                 <p class="planet__source">Source: <a class="planet__hyperlink"
-                        href=<%= planets[strippedURL].overview.source %>>Wikipedia</a><span></span></p>
+                        href=<%= planets[strippedId].overview.source %>>Wikipedia</a><span></span></p>
             </div>
             <div class="planet__links-container">
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">01</span>
-                    <a class="planet__link--overview" href=<%= planets.link %>>Overview</a>
+                    <a class="planet__link--overview" href=<%= planets[strippedId].link.overview %>>Overview</a>
                 </div>
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">02</span>
-                    <a class="planet__link--internal" href="#">Internal
+                    <a class="planet__link--internal" href=<%= planets[strippedId].link.structure %>> Internal
                         structure</a>
                 </div>
                 <div class="planet__buttons">
                     <span class="planet__buttons--number">03</span>
-                    <a class="planet__link--surface" href="mercury-0/surface">Surface geology</a>
+                    <a class="planet__link--surface" href=<%= planets[strippedId].link.geology %>>Surface geology</a>
                 </div>
             </div>
         </div>
         <div class="planet__add-info">
             <div class="add-info__rotation">
                 <span>Rotation Time</span>
-                <p><%= planets[strippedURL].rotation %> </p>
+                <p><%= planets[strippedId].rotation %> </p>
             </div>
             <div class="add-info__evolution">
                 <span>Revolution Time</span>
-                <p><%= planets[strippedURL].revolution %> </p>
+                <p><%= planets[strippedId].revolution %> </p>
             </div>
             <div class="add-info__radius">
                 <span>Radius</span>
-                <p><%= planets[strippedURL].radius %> </p>
+                <p><%= planets[strippedId].radius %> </p>
             </div>
             <div class="add-info__temp">
                 <span>Average Temp.</span>
-                <p><%= planets[strippedURL].temperature %> </p>
+                <p><%= planets[strippedId].temperature %> </p>
             </div>
         </div>
     </section>
