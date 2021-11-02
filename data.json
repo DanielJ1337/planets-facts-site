@@ -21,7 +21,7 @@
         "images": {
             "planet": "/images/planet-mercury.svg",
             "internal": "/images/planet-mercury-internal.svg",
-            "geology": "/images/mercurygeology-mercury.png"
+            "geology": "/images/geology-mercury.png"
         },
         "link": {"overview": "/planets/mercury-0",
                 "structure": "/planets/mercury-0/surface",

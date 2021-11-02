@@ -50,10 +50,11 @@ router.route('/:id?/surface').get((req, res) => {
     res.render('planet');
 })
 
-// ! TODO: isolate correct planet id to load the right description in div
+// ! Why does the CSS break if I display internal structure and surface geology?
 
 router.route('/:id?/geology').get((req, res) => {
-    res.locals.strippedId = req.url.slice(-1);
+    const URL = req.url;
+    res.locals.strippedId = URL.substring(URL.length - 9, URL.length - 8);
     res.locals.urlString = req.originalUrl;
 
     res.locals.planetStructures = [
