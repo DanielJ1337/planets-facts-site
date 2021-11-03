@@ -13,9 +13,6 @@
     <link href="/css/navbar.css" rel="stylesheet" type="text/css">
     <link href="/css/planets.css" rel="stylesheet" type="text/css">
 
-
-    <script src="/js/script.js" defer></script>
-
     <title>Frontend Mentor | Planets fact site</title>
 </head>
 <header>
@@ -23,14 +20,27 @@
         <div class="logo-font">
             the planets
         </div>
-        <ul class="navbar__ul">
+             
+          
+        <div class="navbar__hamburger">
+            <label for="burger" className="navbar__hamburger--label">
+                <span></span>
+            </label>
+            
+            <span></span><span></span><span></span>
+            <input id="burger" type="checkbox" class="navbar__hamburger--toggle">   
+                <ul class="navbar__ul">
+                    <% planets.forEach(element => { %>
+                    <li class="navbar__li-item"><a href=<%= element.link.overview%>><%= element.name%> </a></li>
+                     <% }) %>
+                </ul>
+        </div>
+                    <ul class="navbar__ul">
             <% planets.forEach(element => { %>
             <li class="navbar__li-item"><a href=<%= element.link.overview%>><%= element.name%> </a></li>
             <% }) %>
         </ul>
-        <div class="navbar__hamburger">
-            <span></span><span></span><span></span>
-        </div>
+        
     </nav>
 </header>
 

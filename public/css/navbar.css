@@ -1,105 +1,137 @@
 :root {
-    --white: hsl(0, 0%, 100%);
-    --darkBlue: hsl(240, 67%, 8%);
-    --darkGrey: hsl(240, 17%, 26%);
-    --lightGray: hsl(240, 6%, 54%);
-    --mercuryTeal: hsl(194, 48%, 49%);
-    --venusOrange: hsl(33, 82%, 61%);
-    --earthPurple: hsl(263, 67%, 51%);
-    --marsRed: hsl(10, 63%, 51%);
-    --jupiterRed: hsl(2, 68%, 53%);
-    --saturnBrown: hsl(17, 73%, 46%);
-    --uranusGreen: hsl(169°, 73%, 44%);
-    --neptunBlue: hsl(222, 87%, 56%);
+  --white: hsl(0, 0%, 100%);
+  --darkBlue: hsl(240, 67%, 8%);
+  --darkGrey: hsl(240, 17%, 26%);
+  --lightGray: hsl(240, 6%, 54%);
+  --mercuryTeal: hsl(194, 48%, 49%);
+  --venusOrange: hsl(33, 82%, 61%);
+  --earthPurple: hsl(263, 67%, 51%);
+  --marsRed: hsl(10, 63%, 51%);
+  --jupiterRed: hsl(2, 68%, 53%);
+  --saturnBrown: hsl(17, 73%, 46%);
+  --uranusGreen: hsl(169°, 73%, 44%);
+  --neptunBlue: hsl(222, 87%, 56%);
 }
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    background-color: var(--darkBlue);
-    color: var(--white);
-    background-image: url('../images/background-stars.svg');
+  background-color: var(--darkBlue);
+  color: var(--white);
+  background-image: url("../images/background-stars.svg");
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 2.2rem 3.2rem;
-    justify-content: space-between;
-    border-bottom: 1px solid #979797;
+  display: flex;
+  align-items: center;
+  padding: 2.2rem 3.2rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #979797;
 }
 
 .navbar .logo-font {
-    font-size: 2.8rem;
-    font-family: 'Antonio', sans-serif;
-    text-transform: uppercase;
+  font-size: 2.8rem;
+  font-family: "Antonio", sans-serif;
+  text-transform: uppercase;
 }
 
 .navbar__ul {
-    display: flex;
+  display: flex;
 }
 
 .navbar__li-item {
-    list-style-type: none;
-    margin-left: 3.3rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Spartan', sans-serif;
-    opacity: 0.8;
+  list-style-type: none;
+  margin-left: 3.3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Spartan", sans-serif;
+  opacity: 0.8;
 }
 
 .navbar__li-item > a {
-    color: var(--white);
-    text-decoration: none;
+  color: var(--white);
+  text-decoration: none;
 }
 
 .navbar__hamburger {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
+  .navbar {
+    flex-direction: column;
+  }
 
-    .navbar__ul {
-        margin-top: 3.9rem;
-        margin-bottom: 1rem;
+  .navbar__ul {
+    margin-top: 3.9rem;
+    margin-bottom: 1rem;
 
-        padding-inline-start: 0;
-    }
+    padding-inline-start: 0;
+  }
 
-    .navbar__li-item {
-        margin: 0 2.25rem;
-        font-size: 1.1rem;
-    }
+  .navbar__li-item {
+    margin: 0 2.25rem;
+    font-size: 1.1rem;
+  }
 }
 
 .navbar__hamburger > span {
-    background-color: var(--white);
-    margin: 0.2rem;
-    min-width: 2.4rem;
-    min-height: 3px;
+  background-color: var(--white);
+  margin: 0.2rem;
+  min-width: 2.4rem;
+  min-height: 3px;
 }
 
 @media only screen and (max-width: 375px) {
-    .navbar {
-        flex-direction: row;
-    }
+  .navbar {
+    flex-direction: row;
+    position: relative;
+  
+  }
 
-    .navbar__ul {
-        display: none;
-    }
+  .navbar__ul {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    left: 0;
+    top: 50%;
+    width: 100vw;
+    height: 90vh;
+    z-index: 10;
+    background-color: var(--darkBlue);
+  }
 
-    .navbar__hamburger {
-        display: flex;
-        flex-direction: column;
-    }
+  .navbar__ul > li {
+    margin: 6rem 3rem;
+    font-size: 1.8rem;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar__hamburger label span{
+  background: white;
+  margin: 0.2rem;
+  width: 2.4rem;
+  min-height: 3px;  
+}
+
+  .navbar__hamburger--toggle{
+      display: none;
+  }
+
+  .navbar__hamburger--toggle:checked ~ ul {
+    display: block;
+    left: 32.5%;
+   
+  }
 }

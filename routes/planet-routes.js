@@ -12,7 +12,6 @@ router.route('/:id?/surface').get((req, res) => {
     const URL = req.url;
     res.locals.strippedId = URL.substring(URL.length-9, URL.length-8);
     res.locals.urlString = req.originalUrl;
-    console.log(res.locals.urlString);
 
     res.locals.planetStructures = [
         {

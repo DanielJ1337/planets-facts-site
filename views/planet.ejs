@@ -3,24 +3,24 @@
     <div class="main__mobile-menu">
         <div class="overview-wrapper">
             <div class="overview">
-                Overview
+                <a style="color: white; text-decoration: none" href=<%= planets[strippedId].link.overview %>>Overview</a>
             </div>
         </div>
         <div class="structure-wrapper">
             <div class="structure">
-                Structure
+                <a style="color: white; text-decoration: none" href=<%= planets[strippedId].link.structure %>>Structure</a>
             </div>
         </div>
         <div class="surface-wrapper">
             <div class="surface">
-                Surface
+                <a  style="color: white; text-decoration: none"href=<%= planets[strippedId].link.geology %>>Surface</a>
             </div>
         </div>
     </div>
     <section class="planet">
         <div class="planet__image-container">
             <img class="planet__image" src=<% if(urlString === planets[strippedId].link.overview) { %>
-                <%= planets[strippedId].images.planet %> alt=<%= planets[strippedId].name %>>
+                <%= planets[strippedId].images.planet %> alt=<%= planets[strippedId].name %>
                 <% } else if (urlString === planets[strippedId].link.structure) { %>
                     <%= planets[strippedId].images.internal %>
                     <% } else if (urlString === planets[strippedId].link.geology) { %>

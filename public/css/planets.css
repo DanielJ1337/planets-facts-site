@@ -10,31 +10,30 @@
 .planet {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 144rem;
+    justify-content: center; 
     height: 75.6rem;
-    margin: 21.4rem auto;
-}
+}    
 
 .planet__image-container {
-    flex: 0.5;
-    text-align: center;
-    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-evenly;
     height: auto;
-    object-fit: cover;
-    max-height: 680px;
     box-sizing: border-box;
+    
 }
 
 .planet__image {
-    max-height: 500px;
-    width: auto;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    flex: 1;
+
 }
 
 .planet__info-wrapper {
-    flex: 0.5;
-    max-width: 35rem;
+    max-width: 40rem;
 }
 
 .planet__name {
@@ -173,6 +172,7 @@
 
     .planet__text-wrapper {
         width: 33.9rem;
+        margin: auto;
     }
 
     .planet__buttons {
@@ -186,7 +186,7 @@
     .planet__add-info {
         width: auto;
         gap: 1.1rem;
-        margin: 2.7rem 4rem;
+        margin: auto;
     }
 
     .planet .add-info__rotation,
@@ -240,9 +240,14 @@
         text-transform: uppercase;
         font-family: 'Spartan', sans-serif;
         height: 4.6rem;
-        border-block-end: 3px solid green;
         width: 8rem;
         text-align: center;
+    }
+
+    .main__mobile-menu > .overview-wrapper:active,
+    .main__mobile-menu > .structure-wrapper:active,
+    .main__mobile-menu > .surface-wrapper:active {
+        border-block-end: 3px solid white;
     }
 
     .overview,
@@ -253,8 +258,7 @@
     }
 
     .planet {
-        margin: 0;
-        margin-top: 10rem;
+        margin: 5rem 0;
         height: auto;
     }
 
@@ -264,6 +268,7 @@
 
     .planet__image {
         max-height: 220px;
+        margin-bottom: 5rem;
     }
 
     .planet__text-wrapper {
